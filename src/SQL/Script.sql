@@ -21,3 +21,5 @@ VALUES
 
 SELECT * FROM PACIENTES;
 
+teste
+
