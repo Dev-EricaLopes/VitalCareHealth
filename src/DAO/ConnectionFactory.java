@@ -6,8 +6,8 @@ import java.sql.DriverManager;
 
 public class ConnectionFactory {
     private String usuario = "root";
-    private String senha = "root";
-    //private String senha = "Root";
+    //private String senha = "root";
+    private String senha = "Root";
     private String host = "localhost";
     private String porta = "3306";
     private String bd = "VitalCareHealth";
@@ -30,9 +30,9 @@ public class ConnectionFactory {
         }
     }
     
-  /*  public static void main(String [] args)
+   public static void main(String [] args)
     {
         ConnectionFactory factory = new ConnectionFactory();
         factory.obtemConexao();
-    }*/
+    }
 }    
