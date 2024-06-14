@@ -1,6 +1,6 @@
 
-create database vitalcarehealth;
-use vitalcarehealth;
+create database VitalCareHealth;
+use VitalCareHealth;
 
 CREATE TABLE Pacientes (
     Codigo INT AUTO_INCREMENT PRIMARY KEY,
