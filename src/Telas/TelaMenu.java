@@ -4,17 +4,25 @@
  */
 package Telas;
 
+import classes.Paciente;
+
 /**
  *
  * @author Administrator
  */
 public class TelaMenu extends javax.swing.JFrame {
-
+    
+    private Paciente paciente;
     /**
      * Creates new form TelaMenu
      */
     public TelaMenu() {
         initComponents();
+    }
+    
+    public TelaMenu(Paciente paciente) {
+        initComponents();
+        this.paciente = paciente;
     }
 
     /**
@@ -26,11 +34,14 @@ public class TelaMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        numerodados = new javax.swing.JLabel();
+
+        jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Menu.");
@@ -44,7 +55,7 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(770, 380, 190, 190);
+        jButton1.setBounds(750, 370, 210, 200);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/botaoconsultas.png"))); // NOI18N
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -54,7 +65,7 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(70, 380, 190, 190);
+        jButton2.setBounds(40, 370, 210, 200);
 
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/botaotelemedicina.png"))); // NOI18N
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -64,7 +75,7 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(310, 380, 189, 190);
+        jButton3.setBounds(279, 370, 220, 200);
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/botaovacinas.png"))); // NOI18N
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -74,11 +85,16 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(540, 380, 190, 190);
+        jButton4.setBounds(510, 370, 220, 200);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Tela menu.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 990, 620);
+        numerodados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Tela menu.png"))); // NOI18N
+        numerodados.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                numerodadosPropertyChange(evt);
+            }
+        });
+        getContentPane().add(numerodados);
+        numerodados.setBounds(0, 0, 990, 620);
 
         setSize(new java.awt.Dimension(1004, 625));
         setLocationRelativeTo(null);
@@ -105,9 +121,13 @@ public class TelaMenu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        new TelaReceita ().setVisible (true);
+        new TelaReceita().setVisible (true);
         dispose ();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void numerodadosPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_numerodadosPropertyChange
+        // TODO add your handling code here:
+    }//GEN-LAST:event_numerodadosPropertyChange
 
     /**
      * @param args the command line arguments
@@ -150,5 +170,6 @@ public class TelaMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel numerodados;
     // End of variables declaration//GEN-END:variables
 }

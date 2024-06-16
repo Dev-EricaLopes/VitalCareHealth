@@ -8,12 +8,12 @@ package Telas;
  *
  * @author Mayara
  */
-public class TelaCancelamentoTelem extends javax.swing.JFrame {
+public class TeleCanConcl extends javax.swing.JFrame {
 
     /**
-     * Creates new form TelaCancelamentoTelem
+     * Creates new form TeleCanConcl
      */
-    public TelaCancelamentoTelem() {
+    public TeleCanConcl() {
         initComponents();
     }
 
@@ -28,20 +28,16 @@ public class TelaCancelamentoTelem extends javax.swing.JFrame {
 
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        imagem = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setTitle("TelaCancel");
         getContentPane().setLayout(null);
 
         jButton3.setBackground(new java.awt.Color(102, 153, 255));
         jButton3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("OK");
+        jButton3.setText("Menu Inicial");
         jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,41 +45,25 @@ public class TelaCancelamentoTelem extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(700, 490, 150, 40);
+        jButton3.setBounds(590, 380, 150, 50);
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(707, 466, 140, 30);
+        jLabel2.setBounds(597, 380, 140, 40);
 
-        imagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/TelemMotivoCanc.jpg"))); // NOI18N
-        imagem.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(imagem);
-        imagem.setBounds(0, 0, 963, 543);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/TeleCanConcl.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 931, 530);
 
-        jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(110, 386, 740, 30);
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(112, 242, 740, 40);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(110, 382, 740, 40);
-
-        setSize(new java.awt.Dimension(1016, 1008));
+        setSize(new java.awt.Dimension(947, 532));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        new ConsultaCancelada().setVisible(true);
+        new TelaMenu().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    
     /**
      * @param args the command line arguments
      */
@@ -101,31 +81,27 @@ public class TelaCancelamentoTelem extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCancelamentoTelem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TeleCanConcl.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCancelamentoTelem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TeleCanConcl.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCancelamentoTelem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TeleCanConcl.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCancelamentoTelem.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TeleCanConcl.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaCancelamentoTelem().setVisible(true);
+                new TeleCanConcl().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel imagem;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

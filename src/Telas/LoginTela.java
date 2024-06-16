@@ -6,14 +6,20 @@ package Telas;
  */
 
 
+import DAO.ConnectionFactory;
+import classes.Paciente;
 import javax.swing.JOptionPane;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 /**
  *
  * @author erica
  */
 public class LoginTela extends javax.swing.JFrame {
-
+    
+    private Connection conn;
     /**
      * Creates new form LoginTela
      */
@@ -189,12 +195,12 @@ public class LoginTela extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-     public void abrirTelaMenu() {
+     public void abrirTelaMenu(Paciente paciente) {
         // Feche a tela de login
         dispose();
 
         // Crie e exiba a tela de menu
-        TelaMenu telaMenu = new TelaMenu();
+        TelaMenu telaMenu = new TelaMenu(paciente);
         telaMenu.setVisible(true);
     }
      
@@ -219,17 +225,45 @@ public class LoginTela extends javax.swing.JFrame {
         String login, senha;
         login = txtUsuario.getText();
         senha = txtSenha.getText();
+        
+        ConnectionFactory conexao = new ConnectionFactory();
+        conn = conexao.obtemConexao();
+        
+        //String sql = "SELECT * FROM pacientes WHERE CPF = '234.567.890-00' AND senha = '12345'";
+        String sql = "SELECT * FROM pacientes WHERE CPF = ? AND senha = ?";
 
-        if(login.equals("mayara") && senha.equals("adm"))
-        {
-            JOptionPane.showMessageDialog(null, "Seja bem vindo a VitalCareHealth!!!");
-            abrirTelaMenu();
-
+        try {
+            
+            PreparedStatement stmt = this.conn.prepareStatement(sql);
+            stmt.setString(1, login);
+            stmt.setString(2, senha);
+            ResultSet rs = stmt.executeQuery();
+            
+            Paciente paciente = new Paciente();
+            
+            if(rs.next()) {
+                paciente.setCodigo(rs.getInt("Codigo"));
+                paciente.setCpf(rs.getString("cpf"));
+                paciente.setEmail(rs.getString("Email"));
+                paciente.setEndereco(rs.getString("Endereco"));
+                paciente.setTelefone(rs.getString("Telefone"));
+                paciente.setDataNascimento(rs.getString("DataNascimento"));
+                paciente.setSenha(rs.getString("senha"));
+                paciente.setNome(rs.getString("nome"));
+                 
+                
+                JOptionPane.showMessageDialog(null, 
+                        "Seja bem vindo a VitalCareHealth!!!");
+                abrirTelaMenu(paciente);
+            }
+            else {
+                JOptionPane.showMessageDialog(null,
+                        "ERRO. Usuário e/ou Senha inválido!");
+            }
+            //return paciente
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "erro: " + e.getMessage());
         }
-
-        else
-        JOptionPane.showMessageDialog(null,
-            "ERRO. Usuário e/ou Senha inválido!");
     }//GEN-LAST:event_btLogarActionPerformed
 
     /**

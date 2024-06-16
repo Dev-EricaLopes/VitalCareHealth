@@ -77,6 +77,11 @@ public class Vacinacmsucesso extends javax.swing.JFrame {
 
         jRadioButtonMenuItem2.setSelected(true);
         jRadioButtonMenuItem2.setText("Cancelar Vacinas.");
+        jRadioButtonMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jRadioButtonMenuItem2);
 
         jMenuBar1.add(jMenu1);
@@ -98,6 +103,12 @@ public class Vacinacmsucesso extends javax.swing.JFrame {
         new TelaVacinas().setVisible (true);
         dispose ();
     }//GEN-LAST:event_jRadioButtonMenuItem1ActionPerformed
+
+    private void jRadioButtonMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMenuItem2ActionPerformed
+        // TODO add your handling code here:
+         new VacinaMotCanc().setVisible (true);
+        dispose ();
+    }//GEN-LAST:event_jRadioButtonMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
