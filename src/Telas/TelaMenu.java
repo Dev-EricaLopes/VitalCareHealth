@@ -39,6 +39,7 @@ public class TelaMenu extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         numerodados = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -86,6 +87,8 @@ public class TelaMenu extends javax.swing.JFrame {
         });
         getContentPane().add(jButton4);
         jButton4.setBounds(510, 370, 220, 200);
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(40, 80, 460, 170);
 
         numerodados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Tela menu.png"))); // NOI18N
         numerodados.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
@@ -163,13 +166,14 @@ public class TelaMenu extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel numerodados;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,9 +35,15 @@ VALUES
 ('Pamela dos Santos Sobré', 'pamela.santos@email.com', '345.678.901-00', 'Av. dos Ipês, 456, Bairro Verde, Salvador - BA, CEP: 40000-789', '(71) 98765-4321', '1987-04-28', '12345');
 
 
-select * from pacientes;
+Codigo
+Nome
+    Endereco
+Telefone
+    DataNascimento
+pacientes
 
-update pacientes
-set senha = `123456`
-where codigo = 1;
+
+
+UPDATE `vitalcarehealth`.`pacientes` SET `Senha` = '12345' 
+WHERE (`Codigo` = '1');
 

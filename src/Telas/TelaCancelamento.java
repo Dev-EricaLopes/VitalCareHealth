@@ -48,7 +48,7 @@ public class TelaCancelamento extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(740, 540, 150, 50);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o motivo do cancelmento.", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o motivo do cancelmento.", "Data Errada ", "Horario Errado", "Especialidade Errada " }));
         getContentPane().add(jComboBox1);
         jComboBox1.setBounds(110, 260, 790, 60);
         getContentPane().add(jTextField1);

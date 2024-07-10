@@ -69,6 +69,12 @@ public class LoginTela extends javax.swing.JFrame {
         setResizable(false);
         setType(java.awt.Window.Type.UTILITY);
         getContentPane().setLayout(null);
+
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtUsuario);
         txtUsuario.setBounds(570, 130, 280, 30);
         getContentPane().add(txtSenha);
@@ -265,6 +271,10 @@ public class LoginTela extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "erro: " + e.getMessage());
         }
     }//GEN-LAST:event_btLogarActionPerformed
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

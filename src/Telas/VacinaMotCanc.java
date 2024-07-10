@@ -34,11 +34,11 @@ public class VacinaMotCanc extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(110, 382, 740, 50);
+        jTextField1.setBounds(100, 380, 760, 50);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Data Errada", "Horario Errado ", "Vacina Errada", "Dose Errada " }));
         getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(110, 240, 740, 50);
+        jComboBox1.setBounds(100, 240, 760, 50);
 
         jButton4.setBackground(new java.awt.Color(102, 153, 255));
         jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -58,7 +58,7 @@ public class VacinaMotCanc extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 946, 550);
 
-        setSize(new java.awt.Dimension(962, 565));
+        setSize(new java.awt.Dimension(962, 569));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

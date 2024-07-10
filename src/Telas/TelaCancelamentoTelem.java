@@ -27,12 +27,12 @@ public class TelaCancelamentoTelem extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton3 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         imagem = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -49,14 +49,21 @@ public class TelaCancelamentoTelem extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(700, 490, 150, 40);
+        jButton3.setBounds(720, 480, 150, 50);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Data Errada", "Horario Errado", "Especialidade Errada  " }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(120, 240, 750, 40);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(120, 370, 750, 50);
         getContentPane().add(jLabel2);
         jLabel2.setBounds(707, 466, 140, 30);
 
         imagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/TelemMotivoCanc.jpg"))); // NOI18N
+        imagem.setToolTipText("");
         imagem.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(imagem);
-        imagem.setBounds(0, 0, 963, 543);
+        imagem.setBounds(10, -10, 963, 560);
 
         jScrollPane1.setViewportBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -67,13 +74,7 @@ public class TelaCancelamentoTelem extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(110, 386, 740, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox1);
-        jComboBox1.setBounds(112, 242, 740, 40);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(110, 382, 740, 40);
-
-        setSize(new java.awt.Dimension(1016, 1008));
+        setSize(new java.awt.Dimension(981, 562));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
